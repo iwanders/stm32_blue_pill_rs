@@ -40,7 +40,7 @@ fn main() -> ! {
     let mut led = gpioc.pc13.into_push_pull_output(&mut gpioc.crh);
     // Configure the syst timer to trigger an update every second
     let mut timer = Timer::syst(cp.SYST, &clocks).counter_hz();
-    timer.start(1.Hz()).unwrap();
+    timer.start(5.Hz()).unwrap();
 
     // Wait for the timer to trigger an update and change the state of the LED
     loop {

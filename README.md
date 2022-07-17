@@ -9,6 +9,9 @@ Following [cortex-m-quickstart](https://github.com/rust-embedded/cortex-m-quicks
 - 64k of flash, 20 kb sram.
 - Memory start at `0x08000000` according to [flash memory](https://www.st.com/resource/en/programming_manual/pm0075-stm32f10xxx-flash-memory-microcontrollers-stmicroelectronics.pdf).
 
+## Useful links
+- https://github.com/stm32-rs/stm32f1xx-hal
+
 ## Setup Steps
 
 - Install the target: `rustup target add thumbv7m-none-eabi`
@@ -21,11 +24,6 @@ Following [cortex-m-quickstart](https://github.com/rust-embedded/cortex-m-quicks
 - Run `cargo run`
 
 
-## More things
-- https://github.com/stm32-rs/stm32f1xx-hal
 
 
 
-
-# Maybe later?
-- Install `cargo install cargo-embed` (`apt install -y libusb-1.0-0-dev libudev-dev` as wells)
