@@ -1,4 +1,7 @@
-//! Blinks an LED
+//! This example is a mix of:
+//! https://github.com/stm32-rs/stm32f1xx-hal/blob/f9b24f4d9bac7fc3c93764bd295125800944f53b/examples/blinky.rs
+//! and
+//! https://github.com/stm32-rs/stm32f1xx-hal/blob/f9b24f4d9bac7fc3c93764bd295125800944f53b/examples/usb_serial.rs
 //!
 //! This assumes that a LED is connected to pc13 as is the case on the blue pill board.
 //!
