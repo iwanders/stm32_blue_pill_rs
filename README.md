@@ -1,6 +1,6 @@
 # STM32 'Blue Pill' Rust Example.
 
-Using info from [cortex-m-quickstart](https://github.com/rust-embedded/cortex-m-quickstart/tree/cc19bdda8b93afd458d9c005096571e90b6d2929) and [stm32f1xx-hal](https://github.com/stm32-rs/stm32f1xx-hal/tree/f9b24f4d9bac7fc3c93764bd295125800944f53b). Repo is mainly a reference for myself / steps I went through during first bringup.
+Using info from [cortex-m-quickstart](https://github.com/rust-embedded/cortex-m-quickstart/tree/cc19bdda8b93afd458d9c005096571e90b6d2929) and [stm32f1xx-hal](https://github.com/stm32-rs/stm32f1xx-hal/tree/f9b24f4d9bac7fc3c93764bd295125800944f53b). Repo is mainly a reference for myself / steps I went through during first bringup. Example has a working usb serial port and blinks led.
 
 ## Board
 

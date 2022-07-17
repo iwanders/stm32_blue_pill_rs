@@ -16,19 +16,17 @@ use panic_halt as _;
 
 use nb::block;
 
-
 use cortex_m::asm::delay;
 use cortex_m_rt::entry;
 use stm32f1xx_hal::{pac, prelude::*, timer::Timer};
-
 
 // for serial.
 use stm32f1xx_hal::usb::{Peripheral, UsbBus};
 use usb_device::prelude::*;
 use usbd_serial::{SerialPort, USB_CLASS_CDC};
 
-use embedded_hal::digital::v2::PinState::{Low, High};
 use embedded_hal::digital::v2::OutputPin;
+use embedded_hal::digital::v2::PinState::{High, Low};
 
 #[entry]
 fn main() -> ! {
@@ -65,8 +63,6 @@ fn main() -> ! {
     let mut timer = Timer::syst(cp.SYST, &clocks).counter_hz();
     timer.start(5.Hz()).unwrap();
 
-
-
     // Setup usb serial
 
     let mut gpioa = dp.GPIOA.split();
@@ -95,13 +91,10 @@ fn main() -> ! {
         .device_class(USB_CLASS_CDC)
         .build();
 
-
-
     // Wait for the timer to trigger an update and change the state of the LED
     let mut led_state = Low;
     use embedded_hal::digital::v2::OutputPin;
     loop {
-
         if !usb_dev.poll(&mut [&mut serial]) {
             continue;
         }
