@@ -4,6 +4,7 @@ edition = "2021"
 readme = "README.md"
 name = "blink"
 version = "0.1.0"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
 embedded-hal = "0.2.7"
